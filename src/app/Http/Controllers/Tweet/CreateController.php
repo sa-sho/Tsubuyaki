@@ -17,6 +17,7 @@ class CreateController extends Controller
     public function __invoke(CreateRequest $request)
     {
         $tweet = new Tweet;
+        $tweet->user_id = $request->userId(); //ここでUserIdを保存している
         $tweet->content = $request->tweet();
         $tweet->save();
         return redirect()->route('tweet.index');
