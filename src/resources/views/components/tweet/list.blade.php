@@ -10,6 +10,7 @@
                     {{ $tweet->user->name }}
                 </span>
                 <p class="text-gray-600">{!! nl2br(e($tweet->content)) !!}</p>
+                <x-tweet.images :images="$tweet->images"/>
             </div>
             <div>
                 <!-- TODO 編集と削除 -->
