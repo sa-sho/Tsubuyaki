@@ -12,7 +12,7 @@
                     '{{ asset('storage/images/' . $image->name) }}' })"
                     class="cursor-pointer">
                     <img alt="{{ $image->name }}" class="object-fit w-full"
-                    src="{{ asset('storage/images' . $image->name) }}">
+                    src="{{ asset('storage/images/' . $image->name) }}">
                 </a>
             </div>
         </div>

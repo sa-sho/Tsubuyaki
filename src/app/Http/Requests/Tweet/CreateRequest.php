@@ -26,7 +26,7 @@ class CreateRequest extends FormRequest
         return [
             'tweet' => 'required|max:140',
             'images' => 'array|max:4',
-            'images' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ];
     }
 
