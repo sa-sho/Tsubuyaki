@@ -21,7 +21,7 @@ php artisan migrate --force
 echo "Directory"
 pwd
 
-apt install nodejs npm
+apt install nodejs -y
 
 echo "install node modules..."
 npm ci
