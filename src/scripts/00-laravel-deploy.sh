@@ -1,36 +1,22 @@
 #!/usr/bin/env bash
-# Change to the project directory
-cd $src
+echo "Running composer"
+composer global require hirak/prestissimo
+composer install --no-dev --working-dir=/var/www/html
 
-# Turn on maintenance mode
-php artisan down || true
-
-# Install/update composer dependecies
-composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
-
-# Run database migrations
-php artisan migrate --force
-
-# Clear caches
-php artisan cache:clear
-
-# Clear expired password reset tokens
-php artisan auth:clear-resets
-
-# Clear and cache routes
-php artisan route:cache
-
-# Clear and cache config
+echo "Caching config..."
 php artisan config:cache
 
-# Clear and cache views
+echo "Caching routes..."
+php artisan route:cache
+
+echo "Caching views..."
 php artisan view:cache
 
-# Install node modules
-npm ci
+echo "Running migrations..."
+php artisan migrate --force
 
-# Build assets using Laravel Mix
+echo "install node modules..."
+npm install
+
+echo "Running build..."
 npm run build
-
-# Turn off maintenance mode
-php artisan up
