@@ -15,6 +15,8 @@ php artisan view:cache
 echo "Running migrations..."
 php artisan migrate --force
 
+cd ..
+
 echo "install node modules..."
 npm install
 
