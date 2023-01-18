@@ -12,4 +12,4 @@ php artisan route:cache
 echo "Running migrations..."
 php artisan migrate --force
 
-npm run build
+npm run prod
