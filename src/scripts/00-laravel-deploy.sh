@@ -18,6 +18,8 @@ php artisan view:cache
 echo "Running migrations..."
 php artisan migrate --force
 
+sudo apt-get install -y npm
+
 echo "install node modules..."
 npm ci
 
