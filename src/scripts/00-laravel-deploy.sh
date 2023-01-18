@@ -1,3 +1,6 @@
+# Turn on maintenance mode
+php artisan down || true
+
 #!/usr/bin/env bash
 echo "Running composer"
 composer global require hirak/prestissimo
@@ -15,10 +18,11 @@ php artisan view:cache
 echo "Running migrations..."
 php artisan migrate --force
 
-cd ..
-
 echo "install node modules..."
-npm install
+npm ci
 
 echo "Running build..."
 npm run build
+
+# Turn off maintenance mode
+php artisan up
