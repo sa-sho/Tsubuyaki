@@ -9,5 +9,14 @@ php artisan config:cache
 echo "Caching routes..."
 php artisan route:cache
 
+echo "Caching views..."
+php artisan view:cache
+
 echo "Running migrations..."
 php artisan migrate --force
+
+echo "install node modules..."
+npm ci
+
+echo "Running build..."
+npm run build
