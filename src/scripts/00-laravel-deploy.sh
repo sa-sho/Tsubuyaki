@@ -18,6 +18,9 @@ php artisan view:cache
 echo "Running migrations..."
 php artisan migrate --force
 
+echo "Directory"
+pwd
+
 apt install nodejs npm
 
 echo "install node modules..."
