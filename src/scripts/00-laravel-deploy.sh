@@ -21,13 +21,13 @@ php artisan migrate --force
 echo "Directory"
 pwd
 
-# apt install nodejs npm
+sudo apt-get install npm
 
-# echo "install node modules..."
-# npm ci
+echo "install node modules..."
+npm ci
 
-# echo "Running build..."
-# npm run build
+echo "Running build..."
+npm run build
 
-# # Turn off maintenance mode
-# php artisan up
+# Turn off maintenance mode
+php artisan up
