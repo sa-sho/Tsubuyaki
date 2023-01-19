@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     public function show()
     {
-        return 'Hello';
+        return view('auth.login');
     }
 
     public function showId($id)
