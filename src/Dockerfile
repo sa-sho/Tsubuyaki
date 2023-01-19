@@ -20,6 +20,4 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 
 COPY package.json /var/www/html
 
-RUN sudo apt-get install npm
-
-CMD ["/start.sh"]
+CMD ["npm", "build"]
