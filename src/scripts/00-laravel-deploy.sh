@@ -1,3 +1,5 @@
+cd var/www/html/src
+
 # Turn on maintenance mode
 php artisan down || true
 
