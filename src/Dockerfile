@@ -18,6 +18,6 @@ ENV LOG_CHANNEL stderr
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
-COPY /Users/sato/.nodebrew/node/v18.13.0/bin/node /var/www/html/public
+COPY /Users/sato/.nodebrew/node /var/www/html/public
 
 CMD ["/start.sh"]
