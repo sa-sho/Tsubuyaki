@@ -20,9 +20,10 @@ php artisan migrate --force
 
 echo "Directory"
 pwd
+node -v
 
 echo "install node modules..."
-npm install
+npm ci
 
 echo "Running build..."
 npm run build
