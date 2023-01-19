@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 // Sample
-Route::get('/sample', [\App\Http\Controllers\Sample\IndexController::class, 'show']);
+Route::get('/sample', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'create']);
 
 Route::get('/sample/{id}', [\App\Http\Controllers\Sample\IndexController::class, 'showId']);
 
