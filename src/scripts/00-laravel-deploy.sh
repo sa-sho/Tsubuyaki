@@ -24,5 +24,8 @@ pwd
 # echo "install node modules..."
 # npm ci
 
+echo "Running build"
+npm run build
+
 # Turn off maintenance mode
  php artisan up
