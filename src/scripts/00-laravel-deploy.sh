@@ -22,7 +22,7 @@ echo "Directory"
 pwd
 
 echo "install node modules..."
-npm install
+npm ci
 
 echo "Running build"
 npm run build
