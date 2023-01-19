@@ -25,7 +25,7 @@ pwd
 # npm ci
 
 echo "Running build..."
-npm run build
+vite build
 
 # Turn off maintenance mode
 php artisan up
